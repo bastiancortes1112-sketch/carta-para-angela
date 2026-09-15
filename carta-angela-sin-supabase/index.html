@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Angela ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="hearts"></div>
+
+  <section id="intro" class="screen">
+    <div class="intro-card">
+      <div class="big-heart">❤️</div>
+      <p class="eyebrow">Tengo algo para ti...</p>
+      <h1>Una pequeña sorpresa</h1>
+      <p>He preparado este lugar especialmente para ti.</p>
+      <button onclick="showPassword()">Abrir sorpresa ✨</button>
+    </div>
+  </section>
+
+  <section id="passwordScreen" class="screen hidden">
+    <div class="intro-card">
+      <div class="lock">🔐</div>
+      <h1>Solo para Angela</h1>
+      <p>Escribe la contraseña para entrar.</p>
+      <input id="passwordInput" type="password" placeholder="Contraseña">
+      <button onclick="checkPassword()">Entrar ❤️</button>
+      <p id="passwordError" class="error"></p>
+    </div>
+  </section>
+
+  <main id="main" class="hidden">
+    <header class="hero">
+      <p class="eyebrow">Para la persona que hace mis días especiales</p>
+      <h1>Angela <span>❤️</span></h1>
+      <p>Esta página existe porque quería guardar aquí algunos de nuestros recuerdos.</p>
+      <button class="music-btn" onclick="toggleMusic()">🎵 Música</button>
+    </header>
+
+    <section class="card letter">
+      <p class="eyebrow">Una carta para ti</p>
+      <h2>Gracias por llegar a mi vida 💌</h2>
+      <p>
+        Desde aquel día en que nos conocimos en aquel evento de la prepa,
+        las cosas no volvieron a ser iguales para mí.
+      </p>
+      <p>
+        Me hace muy feliz recordar todo lo que hemos vivido y todas esas
+        pequeñas cosas que hacen que nuestros momentos sean especiales.
+      </p>
+      <p>
+        Quería hacerte este pequeño rincón para que cada vez que lo abras
+        recuerdes lo importante que eres para mí.
+      </p>
+      <p class="signature">Con mucho cariño, para ti. ❤️</p>
+    </section>
+
+    <section class="card counter-card">
+      <p class="eyebrow">Nuestro tiempo</p>
+      <h2>Desde que nos conocimos ⏳</h2>
+      <div id="counter" class="counter"></div>
+  
+    </section>
+
+    <section class="card">
+      <p class="eyebrow">Nuestros recuerdos</p>
+      <h2>Fotos que quiero guardar contigo 📸</h2>
+      <div class="gallery">
+        <img src="fotos/foto1.jpg" alt="Recuerdo 1" onerror="this.parentElement.style.display='none'">
+        <img src="fotos/foto2.jpg" alt="Recuerdo 2" onerror="this.parentElement.style.display='none'">
+        <img src="fotos/foto3.jpg" alt="Recuerdo 3" onerror="this.parentElement.style.display='none'">
+        <img src="fotos/foto4.jpg" alt="Recuerdo 4" onerror="this.parentElement.style.display='none'">
+      </div>
+      
+    </section>
+
+    <section class="card final-card">
+      <div class="big-heart">💗</div>
+      <h2>Angela</h2>
+      <p>Gracias por ser parte de mis recuerdos, mis sonrisas y mis días.</p>
+      <p class="signature">Te quiero mucho. ❤️</p>
+    </section>
+
+    <footer>Hecho especialmente para Angela ❤️</footer>
+  </main>
+
+  <audio id="music" loop>
+    <source src="musica/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

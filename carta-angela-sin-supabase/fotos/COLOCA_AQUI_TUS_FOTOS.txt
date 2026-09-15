@@ -1,0 +1,5 @@
+Pon aquí tus fotos y nómbralas foto1.jpg, foto2.jpg, foto3.jpg y foto4.jpg.
+foto1.jpg
+foto2.jpg
+foto3.jpg
+foto4.jpg

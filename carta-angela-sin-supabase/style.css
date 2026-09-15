@@ -1,0 +1,145 @@
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:#3d2634;
+  background:linear-gradient(135deg,#fff0f6,#f7eaff,#ffe8f0);
+  min-height:100vh;
+}
+.hidden{display:none!important}
+.screen{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+.intro-card,.card{
+  width:min(760px,100%);
+  background:rgba(255,255,255,.84);
+  border:1px solid rgba(255,255,255,.8);
+  border-radius:28px;
+  box-shadow:0 20px 60px rgba(107,52,88,.16);
+  backdrop-filter:blur(10px);
+}
+.intro-card{
+  padding:42px 28px;
+  text-align:center;
+  animation:appear .8s ease;
+}
+.big-heart{font-size:64px;animation:pulse 1.5s infinite}
+.lock{font-size:52px}
+.eyebrow{
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:12px;
+  font-weight:700;
+  opacity:.65;
+}
+h1{font-size:clamp(38px,10vw,72px);margin:10px 0}
+h2{font-size:clamp(25px,6vw,38px);margin-top:8px}
+p{line-height:1.75}
+button{
+  border:0;
+  border-radius:999px;
+  padding:14px 22px;
+  margin-top:12px;
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+  background:#d94f91;
+  color:white;
+  box-shadow:0 8px 20px rgba(217,79,145,.25);
+  transition:.2s;
+}
+button:hover{transform:translateY(-2px)}
+input{
+  display:block;
+  width:min(360px,100%);
+  margin:18px auto 4px;
+  padding:15px 18px;
+  border-radius:14px;
+  border:1px solid #e4c9d8;
+  outline:none;
+  font-size:16px;
+}
+.error{color:#c62858;min-height:24px}
+#main{padding-bottom:20px}
+.hero{
+  min-height:82vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:40px 22px;
+}
+.hero p{max-width:650px}
+.hero h1 span{animation:pulse 1.5s infinite;display:inline-block}
+.music-btn{background:#6f4ca5}
+.card{
+  margin:22px auto;
+  padding:30px 24px;
+  max-width:900px;
+}
+.letter{font-size:17px}
+.signature{font-weight:700}
+.counter-card{text-align:center}
+.counter{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  margin-top:22px;
+}
+.time-box{
+  background:#fff5fa;
+  border-radius:18px;
+  padding:16px 8px;
+}
+.time-box strong{display:block;font-size:30px}
+.time-box span{font-size:12px;opacity:.65}
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  margin-top:20px;
+}
+.gallery img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:18px;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+  transition:.25s;
+}
+.gallery img:hover{transform:scale(1.02)}
+.small{font-size:13px;opacity:.65}
+.final-card{text-align:center}
+footer{text-align:center;padding:35px 20px;opacity:.65}
+.floating-heart{
+  position:fixed;
+  bottom:-30px;
+  pointer-events:none;
+  animation:floatUp 5s linear forwards;
+  z-index:20;
+}
+@keyframes floatUp{
+  from{transform:translateY(0) scale(.8);opacity:0}
+  15%{opacity:.9}
+  to{transform:translateY(-110vh) translateX(var(--drift)) rotate(25deg);opacity:0}
+}
+@keyframes pulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.1)}
+}
+@keyframes appear{
+  from{opacity:0;transform:translateY(15px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@media(max-width:600px){
+  .card{padding:25px 18px;margin:15px 12px;border-radius:22px}
+  .counter{grid-template-columns:repeat(2,1fr)}
+  .gallery{grid-template-columns:1fr 1fr}
+  .hero{min-height:75vh}
+}
